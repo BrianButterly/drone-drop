@@ -3,6 +3,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
+import { Form } from "react-bootstrap";
 
 function Signup() {
   const [address, setAddress] = useState("");
@@ -28,11 +29,14 @@ function Signup() {
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div key={suggestions.description}>
-            <label>Enter address</label>
+            <p>Enter name and address</p>
+
+            <Form.Control required type="text" placeholder="Name" />
             <br />
-            <input
+
+            <Form.Control
               {...getInputProps({
-                placeholder: "Search Places ...",
+                placeholder: "Search Address ...",
                 className: "location-search-input",
               })}
             />
@@ -45,7 +49,7 @@ function Signup() {
                   : "suggestion-item";
                 // inline style for demonstration purpose
                 const style = suggestion.active
-                  ? { backgroundColor: "#fafafa", cursor: "pointer" }
+                  ? { backgroundColor: "#bebebe", cursor: "pointer" }
                   : { backgroundColor: "#ffffff", cursor: "pointer" };
                 return (
                   <div
