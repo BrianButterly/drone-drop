@@ -1,3 +1,7 @@
+* {
+  text-align: center;
+}
+
 img {
   height: 65px;
 }
@@ -9,7 +13,19 @@ img {
   margin: auto;
   width: 70%;
   background-color: #f2f2f2;
-  padding:20px;
+  padding: 20px;
   border-radius: 5px;
   text-align: center;
+}
+
+input {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  box-sizing: border-box;
+  min-height: 38px;
+  outline: 0px;
+  padding: 0px 8px;
+  width: 100%;
+  text-align: left;
 }
