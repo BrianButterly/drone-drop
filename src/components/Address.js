@@ -22,6 +22,9 @@ const customStyles = {
 };
 
 function Address() {
+
+
+
   const [selectedAddress, setSelectedAddress] = useState({});
   const [verificationResult, setVerificationResult] = useState(null);
 
@@ -61,7 +64,9 @@ function Address() {
         </Button>
       </p>
       <p>{verificationResult}</p>
-      <Button variant="outline-primary">Finish signup</Button>
+      <Button type="submit" variant="outline-primary">
+        Finish signup
+      </Button>
       <hr />
     </div>
   );
