@@ -5,7 +5,7 @@ import PlacesAutocomplete, {
 } from "react-places-autocomplete";
 import { Form } from "react-bootstrap";
 
-function Signup() {
+function Geolocate() {
   const [address, setAddress] = useState("");
   const [coordinates, setCoordinates] = useState({
     lat: null,
@@ -79,4 +79,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Geolocate;
