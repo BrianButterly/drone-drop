@@ -48,11 +48,12 @@ function AddressAutocomplete() {
   return (
     <div style={appStyles}>
       <div
+      className="divv"
         style={{
           backgroundColor: "#EBF0F6",
-          borderRadius: "1em 1em 0 0",
+          borderRadius: "1em",
           padding: "1em",
-          color: "#1E9DB9",
+          color: "#00000",
           fontWeight: 700,
           marginBottom: "-1em",
         }}
@@ -75,30 +76,28 @@ function AddressAutocomplete() {
           apiKey="test_pub_4ca78cdcf5d051e63a5b3570cc9b466"
           onSelection={(selected) => setSelectedAddress(selected.value)}
         />
-      </div>
       <Geolocate
         value={contactInfo.address}
         name="address"
         onChange={handleChange}
       />
+      </div>
       <br />
       <p>
-        <Button variant="outline-primary" onClick={verifyAddress}>
+        <Button type="submit" variant="warning" onClick={verifyAddress}>
           Verify address
         </Button>
       </p>
       <p>{verificationResult}</p>
 
-      <Button type="submit" variant="outline-primary" onClick={handleSubmit}>
+      <Button type="submit" variant="warning" onClick={handleSubmit}>
         Finish signup
       </Button>
-      <hr />
-      <h1>Signed up users</h1>
-      <hr />
       <div>
+        <br/>
         {contacts.map((contact) => (
           <div>
-            <p>{contact.name}</p>
+            <h2>{contact.name}</h2>
           </div>
         ))}
       </div>

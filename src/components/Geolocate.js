@@ -21,12 +21,12 @@ function Geolocate() {
   };
 
   return (
-    <div
+    <div className="divv"
       style={{
         backgroundColor: "#EBF0F6",
         borderRadius: "1em",
         padding: "1em",
-        color: "#1E9DB9",
+        color: "#00000",
         fontWeight: 700,
         marginBottom: "-1em",
       }}
@@ -52,7 +52,6 @@ function Geolocate() {
                 const className = suggestion.active
                   ? "suggestion-item--active"
                   : "suggestion-item";
-                // inline style for demonstration purpose
                 const style = suggestion.active
                   ? { backgroundColor: "#bebebe", cursor: "pointer" }
                   : { backgroundColor: "#ffffff", cursor: "pointer" };

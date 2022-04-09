@@ -29,3 +29,15 @@ img {
   width: 100%;
   text-align: left;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* .divv {
+transition: 500ms ease-in-out;
+}
+
+.divv:hover {
+margin: 5px;
+} */

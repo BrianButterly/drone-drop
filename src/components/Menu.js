@@ -4,7 +4,7 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 
 function Menu() {
   return (
-    <Navbar bg="dark" expand="lg" variant="dark">
+    <Navbar bg="dark" expand="lg" variant="dark" sticky="top">
       <Container>
         <Navbar.Brand href="/">
           <img src="logo.png" alt="drone logo" />
