@@ -32,7 +32,7 @@ function App() {
     },
     fullScreen: {
       enable: true,
-      zIndex: 'entered' ? -1 : 1,
+      zIndex: "entered" ? -1 : 1,
     },
     detectRetina: true,
     duration: 0,
