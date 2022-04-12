@@ -524,10 +524,10 @@ function App() {
         <Menu />
         <Particles id="tsparticles" options={options} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/brianbutterly.github.io/drone-drop" element={<Home />} />
+          <Route path="/brianbutterly.github.io/drone-drop/home" element={<Home />} />
+          <Route path="/brianbutterly.github.io/drone-drop/about" element={<About />} />
+          <Route path="/brianbutterly.github.io/drone-drop/contact" element={<Contact />} />
         </Routes>
       </>
     </BrowserRouter>
