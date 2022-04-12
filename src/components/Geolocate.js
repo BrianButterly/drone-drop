@@ -21,7 +21,8 @@ function Geolocate() {
   };
 
   return (
-    <div className="divv"
+    <div
+      className="divv"
       style={{
         backgroundColor: "#EBF0F6",
         borderRadius: "1em",
@@ -31,7 +32,6 @@ function Geolocate() {
         marginBottom: "-1em",
       }}
     >
-      <h4>geo-location</h4>
       <PlacesAutocomplete
         value={address}
         onChange={setAddress}
@@ -41,7 +41,7 @@ function Geolocate() {
           <div key={suggestions.description}>
             <Form.Control
               {...getInputProps({
-                placeholder: "Search Address ...",
+                placeholder: "Re-enter Address ...",
                 className: "location-search-input",
               })}
             />

@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import Geolocate from "./Geolocate";
-import {
-  Autocomplete,
-  verify,
-} from "@lob/react-address-autocomplete";
+import { Autocomplete, verify } from "@lob/react-address-autocomplete";
 import { Button } from "react-bootstrap";
-
 
 const appStyles = {
   padding: "1em",
@@ -38,7 +34,7 @@ function AddressAutocomplete() {
   };
 
   const verifyAddress = () =>
-    verify("test_pub_4ca78cdcf5d051e63a5b3570cc9b466", selectedAddress)
+    verify("live_pub_5ff579f9e170f941dfb16870a64db08", selectedAddress)
       .then((result) => {
         const summary = `This address is ${result.deliverability}`;
         setVerificationResult(summary);
@@ -48,7 +44,7 @@ function AddressAutocomplete() {
   return (
     <div style={appStyles}>
       <div
-      className="divv"
+        className="divv"
         style={{
           backgroundColor: "#EBF0F6",
           borderRadius: "1em",
@@ -72,30 +68,40 @@ function AddressAutocomplete() {
           />
         </form>
         <br />
-        <h4>Verification</h4>
         <Autocomplete
-          apiKey="test_pub_4ca78cdcf5d051e63a5b3570cc9b466"
+          apiKey="live_pub_5ff579f9e170f941dfb16870a64db08"
           onSelection={(selected) => setSelectedAddress(selected.value)}
+          
         />
-      <Geolocate
-        value={contactInfo.address}
-        name="address"
-        onChange={handleChange}
-      />
-      </div>
-      <br />
-      <p>
+        <Geolocate
+          value={contactInfo.address}
+          name="address"
+          onChange={handleChange}
+        />
         <Button type="submit" variant="warning" onClick={verifyAddress}>
           Verify address
         </Button>
-      </p>
-      <p>{verificationResult}</p>
+        <br />
+        <p>{verificationResult}</p>
+        <Button type="submit" variant="warning" onClick={handleSubmit}>
+          Finish signup
+        </Button>
+      </div>
+      <br />
 
-      <Button type="submit" variant="warning" onClick={handleSubmit}>
-        Finish signup
-      </Button>
-      <div>
-        <br/>
+      <div
+        style={{
+          backgroundColor: "#EBF0F6",
+          borderRadius: "1em",
+          padding: "1em",
+          color: "#00000",
+          fontWeight: 700,
+          marginBottom: "-1em",
+        }}
+      >
+        <h4>Signed up users</h4>
+        <hr />
+        <br />
         {contacts.map((contact) => (
           <div>
             <h2>{contact.name}</h2>
