@@ -34,7 +34,7 @@ function AddressAutocomplete() {
   };
 
   const verifyAddress = () =>
-    verify("live_pub_5ff579f9e170f941dfb16870a64db08", selectedAddress)
+    verify("test_pub_4ca78cdcf5d051e63a5b3570cc9b466", selectedAddress)
       .then((result) => {
         const summary = `This address is ${result.deliverability}`;
         setVerificationResult(summary);
@@ -69,7 +69,7 @@ function AddressAutocomplete() {
         </form>
         <br />
         <Autocomplete
-          apiKey="live_pub_5ff579f9e170f941dfb16870a64db08"
+          apiKey="test_pub_4ca78cdcf5d051e63a5b3570cc9b466"
           onSelection={(selected) => setSelectedAddress(selected.value)}
           
         />
